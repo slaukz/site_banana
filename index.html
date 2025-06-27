@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Declaração de Amor da Banana</title>
+  <style>
+    body {
+      background: #fffbea;
+      font-family: 'Comic Sans MS', cursive;
+      color: #663300;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    #bananaLove {
+      font-size: 1.4rem;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    button {
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 10px 20px;
+      background: #ffe135;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    button:hover {
+      background: #ffdf61;
+    }
+  </style>
+</head>
+<body>
+  <h2>Fiquei meio embananado fazendo isso...</h2>
+  <img style="width: 750px;" src="nois.png" alt="Nós">
+  <p id="bananaLove">Desde que te vi no cacho da feira, minha casca nunca mais brilhou igual.</p>
+  <button onclick="newLove()">Nova embananação</button>
+  <p>*Obs: Acaba na secreta</p>
+
+  <script>
+    const frasesEmOrdem = [
+      "Você é minha bananinha preferida.",
+      "Meu coração bate mais forte que liquidificador com banana.",
+      "Se amar é descascar, então descasco por você. (Ninguém nunca falou isso)",
+      "Nosso amor é como banana caramelada: doce, quente e grudado.",
+      "Cuidar de você me faz me sentir mais maduro, por mais imaturo que seja eu",
+      "Você é mais doce que doce de banana",
+      "Secreta: Vamos juntos plantar uma bananeira na nossa futura casa? (Você não tem escolha, rs)"
+    ];
+
+    let index = 0;
+
+    function newLove() {
+      if (index < frasesEmOrdem.length) {
+        document.getElementById("bananaLove").textContent = frasesEmOrdem[index];
+        index++;
+      } else {
+        document.getElementById("bananaLove").textContent = "Acabaram as embananações 🍌❤️";
+      }
+    }
+
+    // Mostra a primeira frase da lista ao carregar
+    window.onload = () => {
+      document.getElementById("bananaLove").textContent = frasesEmOrdem[0];
+      index = 1;
+    };
+  </script>
+</body>
+</html>
